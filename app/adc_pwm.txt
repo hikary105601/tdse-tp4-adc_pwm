@@ -1,0 +1,19 @@
+Se implementó un task que toma la señal recibida del ADC, la multiplica por un
+factor de proporcionalidad, y lo convierte en el tiempo activo que utilizará
+el PWM que enciende el LED.
+
+Se eligió multiplicar por un valor de 19, ya que el valor máximo leído por el
+ADC es aproximadamente de 3300, con lo cual el valor máximo del tiempo activo
+será aproximadamente de 62700.
+
+Ejemplos de valores de salida (pwm_active,adc_value):
+mínimo:
+4978,262
+5016,264
+medio:
+31046,1634
+31046,1634
+máximo:
+62586,3294
+62605,3295
+

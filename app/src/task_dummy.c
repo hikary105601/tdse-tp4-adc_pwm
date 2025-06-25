@@ -69,6 +69,9 @@ void task_dummy_init(void *parameters)
 
 void task_dummy_update(void *parameters)
 {
+	shared_data_type * shared_data = (shared_data_type *) parameters;
+
+	shared_data->pwm_active = shared_data->adc_value * 19;
 
 }
 

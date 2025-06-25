@@ -48,6 +48,7 @@
 #include "board.h"
 #include "task_adc.h"
 #include "task_pwm.h"
+#include "task_dummy.h"
 
 
 /********************** macros and definitions *******************************/
@@ -78,6 +79,7 @@ shared_data_type shared_data;
 const task_cfg_t task_cfg_list[]	= {
 		{task_adc_init, task_adc_update, &shared_data},
 		{task_pwm_init,	task_pwm_update, &shared_data},
+		{task_dummy_init, task_dummy_update, &shared_data},
 };
 
 #define TASK_QTY (sizeof(task_cfg_list)/sizeof(task_cfg_t))
